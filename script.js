@@ -1,3 +1,7 @@
+let firstNum;
+let nextNum;
+let operator;
+
 function add(first, next) {
     return first + next;
 }
