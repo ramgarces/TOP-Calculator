@@ -9,3 +9,7 @@ function subtract(first, next) {
 function multiply(first, next) {
     return first * next;
 }
+
+function multiply(first, next) {
+    return first * next;
+}
