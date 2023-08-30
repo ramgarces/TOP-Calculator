@@ -24,4 +24,28 @@ body {
     background-color: #484848;
     width: 30rem;
     height: 40rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.display {
+    display: flex;
+    align-items: center;
+}
+
+.calculator-container > div {
+    background-color: #484848;
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+
+.calculator-container > div > div {
+    background-color: blue;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
