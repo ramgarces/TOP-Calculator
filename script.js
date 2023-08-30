@@ -5,11 +5,13 @@ let operator;
 let displayValue = '';
 
 const buttons = document.querySelectorAll(".numBtn");
+const display = document.querySelector(".display")
 
 buttons.forEach(btn => {
     btn.addEventListener('click', event => {
         console.log(btn.innerHTML)
         displayValue += btn.innerHTML;
+        display.innerHTML = displayValue;
         console.log(`Display value: ${displayValue}`)
     })
 })
