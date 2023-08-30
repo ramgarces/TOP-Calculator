@@ -2,7 +2,17 @@
 let firstNum;
 let nextNum;
 let operator;
-let displayValue;
+let displayValue = '';
+
+const buttons = document.querySelectorAll(".numBtn");
+
+buttons.forEach(btn => {
+    btn.addEventListener('click', event => {
+        console.log(btn.innerHTML)
+        displayValue += btn.innerHTML;
+        console.log(`Display value: ${displayValue}`)
+    })
+})
 
 // Functions
 function add(first, next) {
@@ -32,3 +42,4 @@ function operate(firstNumber, operator, secondNumber) {
         return divide(firstNumber, secondNumber);
     }
 }
+
