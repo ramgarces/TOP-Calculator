@@ -31,20 +31,22 @@ body {
 }
 
 .display {
+    background-color: #c4c4c4;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    font-size: 4rem;
 }
 
-.calculator-container > div {
-    background-color: #484848;
+.calculator-container > div { /* button rows */
     flex: 1;
     display: flex;
-    justify-content: space-evenly;
     gap: 5px;
 }
 
-.calculator-container > div > div {
-    background-color: blue;
+
+.calculator-container > div > div { /* buttons */
+    background-color: #724C9D;
     flex: 1;
     display: flex;
     justify-content: center;
