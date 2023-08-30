@@ -8,7 +8,7 @@ const buttons = document.querySelectorAll(".numBtn");
 const display = document.querySelector(".display")
 
 buttons.forEach(btn => {
-    btn.addEventListener('click', event => {
+    btn.addEventListener('click', () => {
         console.log(btn.innerHTML)
         displayValue += btn.innerHTML;
         display.innerHTML = displayValue;
