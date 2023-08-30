@@ -2,6 +2,7 @@
 let firstNum;
 let nextNum;
 let operator;
+let displayValue;
 
 // Functions
 function add(first, next) {
