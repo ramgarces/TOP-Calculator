@@ -45,7 +45,7 @@ body {
 }
 
 
-.calculator-container > div > div { /* buttons */
+.calculator-container > div > button { /* buttons */
     background-color: #724C9D;
     flex: 1;
     display: flex;
