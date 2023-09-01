@@ -2,17 +2,21 @@
 let firstNum;
 let nextNum;
 let operator;
+let operatorFlag = false;
 let displayValue = '';
+let displayArray = displayValue.split();
 
-const buttons = document.querySelectorAll(".numBtn");
+const numberButtons = document.querySelectorAll(".numBtn");
 const display = document.querySelector(".display")
 
-buttons.forEach(btn => {
+numberButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-        console.log(btn.innerHTML)
+        console.log(`Pressed ${btn.innerHTML}`)
         displayValue += btn.innerHTML;
         display.innerHTML = displayValue;
+        let displayArray = displayValue.split("");
         console.log(`Display value: ${displayValue}`)
+        console.log(`Display array: ${displayArray}`)
     })
 })
 
