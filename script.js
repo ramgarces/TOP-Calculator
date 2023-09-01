@@ -7,6 +7,7 @@ let displayValue = '';
 let displayArray = displayValue.split();
 
 const numberButtons = document.querySelectorAll(".numBtn");
+const operatorButtons = document.querySelectorAll(".opBtn");
 const display = document.querySelector(".display")
 
 numberButtons.forEach(btn => {
@@ -15,6 +16,15 @@ numberButtons.forEach(btn => {
         displayValue += btn.innerHTML;
         display.innerHTML = displayValue;
         let displayArray = displayValue.split("");
+        console.log(`Display value: ${displayValue}`)
+        console.log(`Display array: ${displayArray}`)
+    })
+})
+
+operatorButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        console.log(`Pressed ${btn.innerHTML}`)
+
         console.log(`Display value: ${displayValue}`)
         console.log(`Display array: ${displayArray}`)
     })
