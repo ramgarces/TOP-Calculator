@@ -1,14 +1,16 @@
 // Variables
-let firstNum;
-let nextNum;
-let operator;
+let firstNum = "";
+let nextNum = "";
+let operator = "";
 let operatorFlag = false;
 let displayValue = '';
-let displayArray = displayValue.split();
+let operatingDisplay = `${firstNum} ${operator} ${nextNum}`
 
 const numberButtons = document.querySelectorAll(".numBtn");
 const operatorButtons = document.querySelectorAll(".opBtn");
 const display = document.querySelector(".display")
+const calculationDisplay = document.querySelector(".operating-display")
+calculationDisplay.innerHTML = operatingDisplay;
 
 numberButtons.forEach(btn => {
     btn.addEventListener('click', () => {
