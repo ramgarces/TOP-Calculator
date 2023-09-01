@@ -4,31 +4,34 @@ let nextNum = "";
 let operator = "";
 let operatorFlag = false;
 let displayValue = '';
-let operatingDisplay = `${firstNum} ${operator} ${nextNum}`
+
 
 const numberButtons = document.querySelectorAll(".numBtn");
 const operatorButtons = document.querySelectorAll(".opBtn");
 const display = document.querySelector(".display")
-const calculationDisplay = document.querySelector(".operating-display")
-calculationDisplay.innerHTML = operatingDisplay;
+
 
 numberButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log(`Pressed ${btn.innerHTML}`)
         displayValue += btn.innerHTML;
         display.innerHTML = displayValue;
-        let displayArray = displayValue.split("");
         console.log(`Display value: ${displayValue}`)
-        console.log(`Display array: ${displayArray}`)
+        console.log(`Display array: ${displayValue.split("")}`)
     })
 })
 
 operatorButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log(`Pressed ${btn.innerHTML}`)
-
+        operatorFlag = true;
+        firstNum = displayValue;
+        displayValue = "";
+        displayValue += btn.innerHTML;
+        display.innerHTML = "";
         console.log(`Display value: ${displayValue}`)
-        console.log(`Display array: ${displayArray}`)
+        console.log(`Op flag: ${operatorFlag}`)
+        console.log(`First number: ${firstNum}`)
     })
 })
 
