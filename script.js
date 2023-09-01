@@ -8,16 +8,21 @@ let displayValue = '';
 
 const numberButtons = document.querySelectorAll(".numBtn");
 const operatorButtons = document.querySelectorAll(".opBtn");
+const equalsButton = document.querySelector(".equals-button");
 const display = document.querySelector(".display")
 
 
 numberButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log(`Pressed ${btn.innerHTML}`)
+        if (firstNum && operator) {
+            displayValue = "";
+        }
         displayValue += btn.innerHTML;
         display.innerHTML = displayValue;
         console.log(`Display value: ${displayValue}`)
-        console.log(`Display array: ${displayValue.split("")}`)
+        console.log(`First number: ${firstNum}`)
+        console.log(`Operator: ${operator}`)
     })
 })
 
@@ -28,12 +33,16 @@ operatorButtons.forEach(btn => {
         firstNum = displayValue;
         displayValue = "";
         displayValue += btn.innerHTML;
+        operator = displayValue;
         display.innerHTML = "";
         console.log(`Display value: ${displayValue}`)
         console.log(`Op flag: ${operatorFlag}`)
         console.log(`First number: ${firstNum}`)
+        console.log(`Operator: ${operator}`)
     })
 })
+
+
 
 // Functions
 function add(first, next) {
