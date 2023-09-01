@@ -55,31 +55,15 @@ equalsButton.addEventListener('click', () => {
 
 
 // Functions
-function add(first, next) {
-    return first + next;
-}
+function operate() {
+    this.methods = {
+        "+": (firstNum, nextNum) => firstNum + nextNum,
+        "-": (firstNum, nextNum) => firstNum - nextNum,
+        "*": (firstNum, nextNum) => firstNum * nextNum,
+        "/": (firstNum, nextNum) => firstNum / nextNum,
+    }
 
-function subtract(first, next) {
-    return first - next;
-}
-
-function multiply(first, next) {
-    return first * next;
-}
-
-function divide(first, next) {
-    return first / next;
-}
-
-function operate(firstNumber, operator, secondNumber) {
-    if (operator == "+") {
-        return add(firstNumber, secondNumber);
-    } else if (operator == "-") {
-        return subtract(firstNumber, secondNumber);
-    } else if (operator == "*") {
-        return multiply(firstNumber, secondNumber);
-    } else if (operator == "/") {
-        return divide(firstNumber, secondNumber);
+    this.calculate = function(firstNum, operator, nextNum) {
+        return this.methods[operator](firstNum, nextNum);
     }
 }
-
