@@ -1,8 +1,9 @@
 // Variables
-let firstNum = "";
-let nextNum = "";
-let operator = "";
+// let firstNum = "";
+// let nextNum = "";
+// let operator = "";
 let displayValue = '';
+let calcVariables = {};
 
 const numberButtons = document.querySelectorAll(".numBtn");
 const operatorButtons = document.querySelectorAll(".opBtn");
@@ -12,22 +13,23 @@ const display = document.querySelector(".display")
 numberButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log(`Pressed ${btn.innerHTML}`)
-        
+        displayValue += btn.innerHTML;
+        display.innerHTML += btn.innerHTML;
         console.log(`Display value: ${displayValue}`)
-        console.log(`First number: ${firstNum}`)
-        console.log(`Operator: ${operator}`)
-        console.log(`Array: ${valueArray}`)
     })
 })
 
 operatorButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log(`Pressed ${btn.innerHTML}`)
-        
+        if (!isNaN(displayValue)) {
+            calcVariables["firstNum"] = displayValue;
+        }
+        displayValue = btn.innerHTML;
+        calcVariables["operator"] = displayValue;
         console.log(`Display value: ${displayValue}`)
-        console.log(`First number: ${firstNum}`)
-        console.log(`Operator: ${operator}`)
-        console.log(`Array: ${valueArray}`)
+        console.table(calcVariables)
+
     })
 })
 
@@ -35,10 +37,6 @@ equalsButton.addEventListener('click', () => {
     console.log(`Pressed ${equalsButton.innerHTML}`)
     
     console.log(`Display value: ${displayValue}`)
-    console.log(`First number: ${firstNum}`)
-    console.log(`Next number: ${nextNum}`)
-    console.log(`Operator: ${operator}`)
-    console.log(`Array: ${valueArray}`)
 })
 
 // Functions
