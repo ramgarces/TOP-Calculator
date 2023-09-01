@@ -46,7 +46,7 @@ operatorButtons.forEach(btn => {
 
 equalsButton.addEventListener('click', () => {
     console.log(`Pressed ${equalsButton.innerHTML}`)
-
+    nextNum = displayValue;
     console.log(`Display value: ${displayValue}`)
     console.log(`First number: ${firstNum}`)
     console.log(`Next number: ${nextNum}`)
