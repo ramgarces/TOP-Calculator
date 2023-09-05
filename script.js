@@ -45,14 +45,19 @@ operatorButtons.forEach(btn => {
 equalsButton.addEventListener('click', () => {
     console.log(`Pressed ${equalsButton.innerHTML}`)
     calcVariables["nextNum"] = displayValue;
-    displayValue = "";
     let result = new operate;
-    display.innerHTML = 
+    operationResult = 
         result.calculate(
             +calcVariables["firstNum"], 
             calcVariables["operator"],
             +calcVariables["nextNum"]
         );
+    if (!Number.isInteger(operationResult)) {
+        operationResult = operationResult.toFixed(2);
+    }
+    displayValue = operationResult;
+    display.innerHTML = operationResult;
+    calcVariables["firstNum"] = operationResult;
     console.table(calcVariables)
     console.log(`Display value: ${displayValue}`)
 })
