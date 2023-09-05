@@ -5,6 +5,7 @@
 let numberFlag = false;
 let displayValue = '';
 let calcVariables = {};
+let result = new operate;
 
 const numberButtons = document.querySelectorAll(".numBtn");
 const operatorButtons = document.querySelectorAll(".opBtn");
@@ -19,9 +20,10 @@ numberButtons.forEach(btn => {
             numberFlag = true;
         }
         if (numberFlag) {
-            console.log(`Pressed ${btn.innerHTML}`)
             displayValue += btn.innerHTML;
             display.innerHTML += btn.innerHTML;
+            
+            console.log(`Pressed ${btn.innerHTML}`)
             console.log(`Display value: ${displayValue}`)
         }
     })
@@ -37,6 +39,7 @@ operatorButtons.forEach(btn => {
         displayValue = "";
         displayValue = btn.innerHTML;
         calcVariables["operator"] = displayValue;
+
         console.log(`Display value: ${displayValue}`)
         console.table(calcVariables)
     })
@@ -45,8 +48,7 @@ operatorButtons.forEach(btn => {
 equalsButton.addEventListener('click', () => {
     console.log(`Pressed ${equalsButton.innerHTML}`)
     calcVariables["nextNum"] = displayValue;
-    let result = new operate;
-    operationResult = 
+    let operationResult = 
         result.calculate(
             +calcVariables["firstNum"], 
             calcVariables["operator"],
@@ -58,6 +60,7 @@ equalsButton.addEventListener('click', () => {
     displayValue = operationResult;
     display.innerHTML = operationResult;
     calcVariables["firstNum"] = operationResult;
+
     console.table(calcVariables)
     console.log(`Display value: ${displayValue}`)
 })
