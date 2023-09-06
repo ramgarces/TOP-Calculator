@@ -8,8 +8,6 @@ let result = new operate;
 
 const numberButtons = document.querySelectorAll(".numBtn");
 const operatorButtons = document.querySelectorAll(".opBtn");
-const equalsButton = document.querySelector(".equals-button");
-const buttons = document.querySelectorAll("button");
 const display = document.querySelector(".display")
 
 numberButtons.forEach(btn => {
