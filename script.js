@@ -25,19 +25,22 @@ numberButtons.forEach(btn => {
 
 operatorButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-        operator = btn.innerHTML;
-        if (firstNum && nextNum) {
-            displayValue = result.calculate(+firstNum, operator, +nextNum);
-            display.innerHTML = displayValue;
-        }
         if (numberFlag) {
             firstNum = displayValue;
             numberFlag = false;
             displayValue = '';
-        } else {
-            nextNum = displayValue;
-            displayValue = '';
         }
+        nextNum = displayValue;
+        if (firstNum && nextNum && operator) {
+            displayValue = result.calculate(+firstNum, operator, +nextNum);
+            display.innerHTML = result.calculate(+firstNum, operator, +nextNum);
+            firstNum = displayValue;
+            nextNum = '';
+            operator = '';
+        }
+        operator = btn.innerHTML;
+        displayValue = '';
+
         console.log(`Display Value: ${displayValue}`);
         console.log(`First Number: ${firstNum}`)
         console.log(`Next Number: ${nextNum}`)
