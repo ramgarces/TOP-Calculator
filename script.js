@@ -3,42 +3,22 @@ let firstNum = '';
 let nextNum = '';
 let operator = '';
 let displayValue = '';
+let splitValue;
+let result = new operate;
 
 const numberButtons = document.querySelectorAll(".numBtn");
 const operatorButtons = document.querySelectorAll(".opBtn");
 const equalsButton = document.querySelector(".equals-button");
+const buttons = document.querySelectorAll("button");
 const display = document.querySelector(".display")
 
-numberButtons.forEach(btn => {
+buttons.forEach(btn => {
     btn.addEventListener('click', () => {
-        console.log(`Pressed ${btn.innerHTML}`)
-        
-        console.log(`Display value: ${displayValue}`)
-        console.log(`First number: ${firstNum}`)
-        console.log(`Operator: ${operator}`)
-        console.log(`Array: ${valueArray}`)
+        console.log(btn.innerHTML);
+        updateDisplay(btn);
+        console.log(displayValue);
+        console.log(splitValue);
     })
-})
-
-operatorButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        console.log(`Pressed ${btn.innerHTML}`)
-        
-        console.log(`Display value: ${displayValue}`)
-        console.log(`First number: ${firstNum}`)
-        console.log(`Operator: ${operator}`)
-        console.log(`Array: ${valueArray}`)
-    })
-})
-
-equalsButton.addEventListener('click', () => {
-    console.log(`Pressed ${equalsButton.innerHTML}`)
-    
-    console.log(`Display value: ${displayValue}`)
-    console.log(`First number: ${firstNum}`)
-    console.log(`Next number: ${nextNum}`)
-    console.log(`Operator: ${operator}`)
-    console.log(`Array: ${valueArray}`)
 })
 
 // Functions
@@ -53,4 +33,9 @@ function operate() {
     this.calculate = function(firstNum, operator, nextNum) {
         return this.methods[operator](firstNum, nextNum);
     }
+}
+
+function updateDisplay(x) {
+    displayValue += x.innerHTML;
+    display.innerHTML = displayValue;
 }
