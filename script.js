@@ -8,6 +8,7 @@ let result = new operate;
 
 const numberButtons = document.querySelectorAll(".numBtn");
 const operatorButtons = document.querySelectorAll(".opBtn");
+const clearButton = document.querySelector(".clear-button");
 const display = document.querySelector(".display")
 
 numberButtons.forEach(btn => {
@@ -52,6 +53,19 @@ operatorButtons.forEach(btn => {
         console.log(`Next Number: ${nextNum}`)
         console.log(`Operator: ${operator}`)
     })
+})
+
+clearButton.addEventListener('click', () => {
+    firstNum = '';
+    nextNum = '';
+    operator = '';
+    displayValue = '';
+    numberFlag = true;
+    display.innerHTML = '';
+    console.log(`Display Value: ${displayValue}`);
+    console.log(`First Number: ${firstNum}`)
+    console.log(`Next Number: ${nextNum}`)
+    console.log(`Operator: ${operator}`)
 })
 
 // Functions
