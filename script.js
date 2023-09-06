@@ -34,7 +34,15 @@ operatorButtons.forEach(btn => {
             displayValue = '';
         }
         nextNum = displayValue;
-        if (firstNum && nextNum && operator) {
+        if (operator == '/' && nextNum == 0) {
+            display.innerHTML = "Silly g0000se.";
+            setTimeout(function() {
+                display.innerHTML = "Start again.";
+                setTimeout(function() {
+                    clearAll();
+                },800);
+            },800);
+        } else if (firstNum && nextNum && operator) {
             let solution = result.calculate(+firstNum, operator, +nextNum);
             displayValue = solution;
             if (!Number.isInteger(solution)) {
@@ -56,12 +64,7 @@ operatorButtons.forEach(btn => {
 })
 
 clearButton.addEventListener('click', () => {
-    firstNum = '';
-    nextNum = '';
-    operator = '';
-    displayValue = '';
-    numberFlag = true;
-    display.innerHTML = '';
+    clearAll();
     console.log(`Display Value: ${displayValue}`);
     console.log(`First Number: ${firstNum}`)
     console.log(`Next Number: ${nextNum}`)
@@ -85,4 +88,13 @@ function operate() {
 function updateDisplay(x) {
     displayValue += x.innerHTML;
     display.innerHTML = displayValue;
+}
+
+function clearAll() {
+    firstNum = '';
+    nextNum = '';
+    operator = '';
+    displayValue = '';
+    numberFlag = true;
+    display.innerHTML = '';
 }
