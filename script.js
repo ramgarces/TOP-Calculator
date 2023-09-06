@@ -25,6 +25,10 @@ numberButtons.forEach(btn => {
 
 operatorButtons.forEach(btn => {
     btn.addEventListener('click', () => {
+        if (operator && !firstNum) {
+            operator = '';
+            numberFlag = true;
+        }
         if (numberFlag) {
             firstNum = displayValue;
             numberFlag = false;
