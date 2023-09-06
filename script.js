@@ -3,7 +3,6 @@ let firstNum = '';
 let nextNum = '';
 let operator = '';
 let displayValue = '';
-let splitValue;
 let result = new operate;
 
 const numberButtons = document.querySelectorAll(".numBtn");
