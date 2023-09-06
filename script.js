@@ -32,10 +32,14 @@ operatorButtons.forEach(btn => {
         }
         nextNum = displayValue;
         if (firstNum && nextNum && operator) {
-            displayValue = result.calculate(+firstNum, operator, +nextNum);
-            display.innerHTML = result.calculate(+firstNum, operator, +nextNum);
-            firstNum = displayValue;
-            nextNum = '';
+            let solution = result.calculate(+firstNum, operator, +nextNum);
+            displayValue = solution;
+            if (!Number.isInteger(solution)) {
+                display.innerHTML = solution.toFixed(2);
+            } else {
+                display.innerHTML = solution;
+            }
+            firstNum = solution;
             operator = '';
         }
         operator = btn.innerHTML;
