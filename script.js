@@ -1,7 +1,7 @@
 // Variables
-let firstNum = "";
-let nextNum = "";
-let operator = "";
+let firstNum = '';
+let nextNum = '';
+let operator = '';
 let displayValue = '';
 
 const numberButtons = document.querySelectorAll(".numBtn");
