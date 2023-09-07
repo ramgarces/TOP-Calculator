@@ -9,6 +9,7 @@ let result = new operate;
 const numberButtons = document.querySelectorAll(".numBtn");
 const operatorButtons = document.querySelectorAll(".opBtn");
 const clearButton = document.querySelector(".clear-button");
+const deleteButton = document.querySelector(".delete-button");
 const decimalButton = document.querySelector(".decimal-button");
 const display = document.querySelector(".display")
 

@@ -61,8 +61,7 @@ body {
 }
 
 .calculator-container > div > .clear-button,
-.calculator-container > div > .delete-button
- {
+.calculator-container > div > .delete-button {
     background-color: #9288F8;
     font-weight: 300;
 }
