@@ -56,12 +56,15 @@ body {
     color: #c4c4c4;
 }
 
-.calculator-container > div > .clear-button {
-    background-color: #9288F8;
-}
-
 .calculator-container > div > .equals-button {
     background-color: #FFD2D7;
+}
+
+.calculator-container > div > .clear-button,
+.calculator-container > div > .backspace-button
+ {
+    background-color: #9288F8;
+    font-weight: 300;
 }
 
 .calculator-container > div > button { /* buttons */
