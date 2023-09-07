@@ -20,6 +20,7 @@ const display = document.querySelector(".display")
 numberButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         updateDisplay(btn);
+        clearActiveOperatorColor();
     })
 })
 
@@ -128,4 +129,11 @@ function activeOperator() {
         subtractButton.style.backgroundColor = "#8062D6";
         addButton.style.backgroundColor = "#c4c4c4";
     }
+}
+
+function clearActiveOperatorColor() {
+    divideButton.style.backgroundColor = "#8062D6";
+    multiplyButton.style.backgroundColor = "#8062D6";
+    subtractButton.style.backgroundColor = "#8062D6";
+    addButton.style.backgroundColor = "#8062D6";
 }
