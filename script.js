@@ -64,6 +64,14 @@ operatorButtons.forEach(btn => {
     })
 })
 
+decimalButton.addEventListener('click', () => {
+
+    console.log(`Display Value: ${displayValue}`);
+    console.log(`First Number: ${firstNum}`)
+    console.log(`Next Number: ${nextNum}`)
+    console.log(`Operator: ${operator}`)
+})
+
 clearButton.addEventListener('click', () => {
     clearAll();
     console.log(`Display Value: ${displayValue}`);
