@@ -84,6 +84,14 @@ clearButton.addEventListener('click', () => {
     console.log(`Operator: ${operator}`)
 })
 
+deleteButton.addEventListener('click', () => {
+    
+    console.log(`Display Value: ${displayValue}`);
+    console.log(`First Number: ${firstNum}`)
+    console.log(`Next Number: ${nextNum}`)
+    console.log(`Operator: ${operator}`)
+})
+
 // Functions
 function operate() {
     this.methods = {
