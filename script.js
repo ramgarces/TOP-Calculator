@@ -17,10 +17,6 @@ numberButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log(btn.innerHTML);
         updateDisplay(btn);
-        console.log(`Display Value: ${displayValue}`);
-        console.log(`First Number: ${firstNum}`)
-        console.log(`Next Number: ${nextNum}`)
-        console.log(`Operator: ${operator}`)
     })
 })
 
@@ -57,11 +53,6 @@ operatorButtons.forEach(btn => {
         }
         operator = btn.innerHTML;
         displayValue = '';
-
-        console.log(`Display Value: ${displayValue}`);
-        console.log(`First Number: ${firstNum}`)
-        console.log(`Next Number: ${nextNum}`)
-        console.log(`Operator: ${operator}`)
     })
 })
 
@@ -70,18 +61,10 @@ decimalButton.addEventListener('click', () => {
         displayValue += decimalButton.innerHTML;
         display.innerHTML += decimalButton.innerHTML;
     }
-    console.log(`Display Value: ${displayValue}`);
-    console.log(`First Number: ${firstNum}`)
-    console.log(`Next Number: ${nextNum}`)
-    console.log(`Operator: ${operator}`)
 })
 
 clearButton.addEventListener('click', () => {
     clearAll();
-    console.log(`Display Value: ${displayValue}`);
-    console.log(`First Number: ${firstNum}`)
-    console.log(`Next Number: ${nextNum}`)
-    console.log(`Operator: ${operator}`)
 })
 
 deleteButton.addEventListener('click', () => {
@@ -89,11 +72,6 @@ deleteButton.addEventListener('click', () => {
     displayArray.pop();
     displayValue = displayArray.join('');
     display.innerHTML = displayValue;
-    console.log(`Display Array: ${displayArray}`);
-    console.log(`Display Value: ${displayValue}`);
-    console.log(`First Number: ${firstNum}`)
-    console.log(`Next Number: ${nextNum}`)
-    console.log(`Operator: ${operator}`)
 })
 
 // Functions
