@@ -65,7 +65,10 @@ operatorButtons.forEach(btn => {
 })
 
 decimalButton.addEventListener('click', () => {
-
+    if (!displayValue.includes(".")) {
+        displayValue += decimalButton.innerHTML;
+        display.innerHTML += decimalButton.innerHTML;
+    }
     console.log(`Display Value: ${displayValue}`);
     console.log(`First Number: ${firstNum}`)
     console.log(`Next Number: ${nextNum}`)
