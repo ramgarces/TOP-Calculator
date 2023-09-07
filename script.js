@@ -8,6 +8,10 @@ let result = new operate;
 
 const numberButtons = document.querySelectorAll(".numBtn");
 const operatorButtons = document.querySelectorAll(".opBtn");
+const divideButton = document.querySelector(".divide-button");
+const multiplyButton = document.querySelector(".multiply-button");
+const subtractButton = document.querySelector(".subtract-button");
+const addButton = document.querySelector(".add-button");
 const clearButton = document.querySelector(".clear-button");
 const deleteButton = document.querySelector(".delete-button");
 const decimalButton = document.querySelector(".decimal-button");
@@ -15,7 +19,6 @@ const display = document.querySelector(".display")
 
 numberButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-        console.log(btn.innerHTML);
         updateDisplay(btn);
     })
 })
@@ -100,4 +103,8 @@ function clearAll() {
     displayValue = '';
     numberFlag = true;
     display.innerHTML = '';
+}
+
+function activeOperator() {
+
 }
