@@ -85,3 +85,9 @@ body {
     color: #c4c4c4;
     font-size: 1.5rem;
 }
+
+.footer-image {
+    filter: brightness(0) saturate(100%) invert(87%) sepia(0%) 
+    saturate(14%) hue-rotate(34deg) brightness(93%) contrast(85%);
+    height: 3rem;
+}
