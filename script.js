@@ -85,7 +85,11 @@ clearButton.addEventListener('click', () => {
 })
 
 deleteButton.addEventListener('click', () => {
-    
+    let displayArray = displayValue.split('');
+    displayArray.pop();
+    displayValue = displayArray.join('');
+    display.innerHTML = displayValue;
+    console.log(`Display Array: ${displayArray}`);
     console.log(`Display Value: ${displayValue}`);
     console.log(`First Number: ${firstNum}`)
     console.log(`Next Number: ${nextNum}`)
