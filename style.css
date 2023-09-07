@@ -28,6 +28,7 @@ body {
     flex-direction: column;
     gap: 5px;
     padding: 5px;
+    border-radius: 8px;
 }
 
 .display {
@@ -38,6 +39,7 @@ body {
     flex-direction: column;
     padding: 1rem;
     font-size: 4rem;
+    border-radius: 8px;
 }
 
 .operating-display {
@@ -74,4 +76,5 @@ body {
     align-items: center;
     font-size: 2rem;
     font-weight: bold;
+    border-radius: 8px;
 }
