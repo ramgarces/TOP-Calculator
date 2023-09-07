@@ -56,6 +56,7 @@ operatorButtons.forEach(btn => {
         }
         operator = btn.innerHTML;
         displayValue = '';
+        activeOperator();
     })
 })
 
@@ -106,5 +107,25 @@ function clearAll() {
 }
 
 function activeOperator() {
-
+    if (operator == '/') {
+        divideButton.style.backgroundColor = "#c4c4c4";
+        multiplyButton.style.backgroundColor = "#8062D6";
+        subtractButton.style.backgroundColor = "#8062D6";
+        addButton.style.backgroundColor = "#8062D6";
+    } else if (operator == '*') {
+        divideButton.style.backgroundColor = "#8062D6";
+        multiplyButton.style.backgroundColor = "#c4c4c4";
+        subtractButton.style.backgroundColor = "#8062D6";
+        addButton.style.backgroundColor = "#8062D6";
+    } else if (operator == '-') {
+        divideButton.style.backgroundColor = "#8062D6";
+        multiplyButton.style.backgroundColor = "#8062D6";
+        subtractButton.style.backgroundColor = "#c4c4c4";
+        addButton.style.backgroundColor = "#8062D6";
+    } else if (operator == '+') {
+        divideButton.style.backgroundColor = "#8062D6";
+        multiplyButton.style.backgroundColor = "#8062D6";
+        subtractButton.style.backgroundColor = "#8062D6";
+        addButton.style.backgroundColor = "#c4c4c4";
+    }
 }
